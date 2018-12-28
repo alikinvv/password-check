@@ -1,0 +1,147 @@
+@charset 'UTF-8';
+@import 'mixins';
+
+/*** MIXINS USAGE ***
+
+	@include font-face('fontName', '../fonts/fontPath/fontName', normal); 
+
+	@include xs(12);
+	@include sm(12);
+	@include md(12);
+	@include lg(12);
+
+	@include r(768);
+	@include rmin(768);
+
+	@include trans / trans($what $dur $easing);
+	@include cover;
+
+	@include centerX / centerXa
+	@include centerY / centerYa
+
+	@include overlay($opacity)
+***/
+
+.icon {
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	font-size: 30px;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background: #F6F6F7;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #a3b1c0;
+}
+
+.wrap {
+	background: #fff;
+	border-radius: 10px;
+	padding: 39px 45px 19px;
+
+	.tips {
+		font-size: 14px;
+		display: flex;
+		align-items: center;
+		padding: 10px 0;
+
+		p {
+			margin-bottom: 0;
+			margin-top: 0;
+			margin-right: 60px;
+		}
+	}
+
+	.group {
+		position: relative;
+		padding-bottom: 5px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background: #edf0f5;
+			transition: all .15s ease-in-out;
+			z-index: 1;
+		}
+		
+		&.active {
+			label {
+				top: -15px;
+				font-size: 14px;
+			}
+			
+			&::before {
+				background: #6884dd;
+			}
+		}	
+	}
+
+	svg {
+		width: 70px;
+		position: absolute;
+		top: -21px;
+		right: -20px;
+		fill: #c5d6e7;
+		cursor: pointer;
+		transition: all .2s ease-in-out;
+
+		&.active {
+			fill: #428bfa;
+		}
+	}
+
+	label {
+		position: absolute;
+		top: 5px;
+		left: 0;
+		transition: all .15s ease-in-out;
+	}
+
+	.number {
+		transition: all .2s ease-in-out;
+		
+		&.active {
+			color: #428bfa;
+		}
+	}
+
+	.count {
+		transition: all .2s ease-in-out;
+		
+		&.active {
+			color: #428bfa;
+		}
+	}
+
+	.upper {
+		transition: all .2s ease-in-out;
+		
+		&.active {
+			color: #428bfa;
+		}
+	}
+
+	input {
+		border: 0;
+		position: relative;
+		display: block;
+		width: 100%;
+		padding: 4px 0;
+
+		&:focus {
+			outline: none;
+		}
+	}
+}
