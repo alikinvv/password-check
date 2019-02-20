@@ -6,4 +6,4 @@
 
 ## [Live Demo](https://alikinvv.github.io/password-check/build/)
 
-![search animation](https://cdn.dribbble.com/users/1773016/screenshots/5759103/23.gif)
+![password check](https://cdn.dribbble.com/users/1773016/screenshots/5759103/23.gif)
